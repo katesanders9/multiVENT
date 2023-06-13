@@ -4,12 +4,12 @@ checkpoint_path: ~
 preprocess_path: ~
 restart_checkpoint_path: ~
 
-infact_metadata_path: ~
+multivent_metadata_path: ~
 video_retrieval_path: ~
 
-infact_category_path: ~
-infact_event_path: ~
-infact_language_path: ~
+multivent_category_path: ~
+multivent_event_path: ~
+multivent_language_path: ~
 
 feature_file_name: "features"
 
