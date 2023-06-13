@@ -1,4 +1,4 @@
-# MultiVENT: MultiVENT: Multilingual Videos of Events and Aligned Natural Text
+# MultiVENT: Multilingual Videos of Events and Aligned Natural Text
 
 This repository contains code and data for MultiVENT (Multilingual Videos of Events and aligned Natural Text), a collection of 2,396 multilingual internet news videos with natural language descriptions spanning five target languages. All videos are annotated with ground truth labels and corresponding video text descriptions and current event articles. The repository additionally includes setup code for our MultiCLIP video retrieval approach.
 
@@ -48,7 +48,9 @@ cd multiCLIP
 pip install -e .
 ```
 We use the following model weights:
+
 **Tokenizer**: XLMRobertaTokenizerFast
+
 **OpenCLIP**: CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k
 
 ## Sources
