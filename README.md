@@ -15,11 +15,15 @@ multiVENT
     └───scripts
     |   |   
     |   └───openclip_xlm
-    |       |    openclip_featpool_msrvtt_infer.py       # Python code for inference on MSRVTT
-    |       |    openclip_featpool_msrvtt_infer.sh       # Bash script for inference on MSRVTT
-    |       |    openclip_featpool_multivent_infer.py    # Python code for inference on MSRVTT
-    |       |    openclip_featpool_multivent_infer.sh    # Bash script for inference on MSRVTT
-    |       |    openclip.yaml                           # Config file for model inference
+    |   |   |    openclip_featpool_msrvtt_infer.py       # Python code for inference on MSRVTT
+    |   |   |    openclip_featpool_msrvtt_infer.sh       # Bash script for inference on MSRVTT
+    |   |   |    openclip_featpool_multivent_infer.py    # Python code for inference on MSRVTT
+    |   |   |    openclip_featpool_multivent_infer.sh    # Bash script for inference on MSRVTT
+    |   |   |    openclip.yaml                           # Config file for model inference
+    |   |  
+    |   └───utils
+    |       |    load_multivent_json.py                  # Generate MultiVENT dataset for inference
+    |       |    build_event_ids.py                      # Generate MultiVENT dataset for inference
     |
     └───src
         |   
@@ -60,8 +64,7 @@ First, download the videos linked in the dataset.csv file. Then, after convertin
     language: ...,
     category: ...,
     event: ...,
-    description: ...    # either the video description or event description
-}
+    description: ...},    # either the video description or event description
 ...
 }
 ```
