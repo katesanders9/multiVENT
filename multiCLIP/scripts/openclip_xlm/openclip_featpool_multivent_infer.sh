@@ -7,17 +7,11 @@ module load cudnn/8.2.0.53_cuda11.x
 module load gcc/9.3.0
 module load ffmpeg
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-pyenv deactivate
 
-pyenv activate video_retrieval
-
-
-SRC_PATH=/home/${USER}/retrieval/video_retrieval
+SRC_PATH=/home/${USER}/multiVENT/multiCLIP/
 
 FRAMES=12
-CONFIG_PATH=/home/${USER}/retrieval/video_retrieval/scripts/openclip_xlm
+CONFIG_PATH=/home/${USER}/multiVENT/multiCLIP/scripts/openclip_xlm
 CONFIG_NAME=openclip
 
 CHECKPOINT_PATH=/exp/${USER}/video/laion_models/CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k/open_clip_pytorch_model.bin
@@ -33,6 +27,7 @@ FEAT_FILE="TRIAL_3_VIDEO_ALL"
 
 mkdir -p ${EXP_DIR}
 cd ${EXP_DIR}
+FEAT_FILE=/exp/${USER}/video/feats
 
 echo "NBR_GPUS - ${NBR_GPUS}"
 echo "EXP_DIR - ${EXP_DIR}"

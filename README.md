@@ -49,9 +49,23 @@ pip install -e .
 ```
 We use the following model weights:
 
-**Tokenizer**: XLMRobertaTokenizerFast
+**Tokenizer**: [XLMRobertaTokenizerFast](https://huggingface.co/docs/transformers/model_doc/xlm-roberta)
 
-**OpenCLIP**: CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k
+**OpenCLIP**: [CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k](https://huggingface.co/laion/CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k)
+
+## Data preparation
+First, download the videos linked in the dataset.csv file. Then, after converting the CSV file into a JSON file of the format
+```
+{video_path: {
+    language: ...,
+    category: ...,
+    event: ...,
+    description: ...    # either the video description or event description
+}
+...
+}
+```
+the JSON can be converted into the files necessary to run MultiCLIP by running the `load_multivent_json.py` and `build_event_ids.py` files.
 
 ## Sources
 We draw from the following external repositories:

@@ -7,17 +7,11 @@ module load cudnn/8.2.0.53_cuda11.x
 module load gcc/9.3.0
 module load ffmpeg
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-pyenv deactivate
 
-pyenv activate video_retrieval
-
-
-SRC_PATH=/home/${USER}/src/video/video_retrieval
+SRC_PATH=/home/${USER}/multiVENT/multiCLIP/
 
 FRAMES=12
-CONFIG_PATH=/home/${USER}/src/video/video_retrieval/scripts/openclip_xlm
+CONFIG_PATH=/home/${USER}/multiVENT/multiCLIP/scripts/openclip_xlm
 CONFIG_NAME=openclip
 
 CHECKPOINT_PATH=/exp/${USER}/video/laion_models/CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k/open_clip_pytorch_model.bin
@@ -29,6 +23,7 @@ DATA_ZIP=MSRVTT.zip
 
 NBR_GPUS=1
 EXP_DIR=/exp/${USER}/video/openclip_xlm
+FEAT_FILE=/exp/${USER}/video/feats
 
 mkdir -p ${EXP_DIR}
 cd ${EXP_DIR}
@@ -64,11 +59,11 @@ data_path=${TMPDIR}/video/MSRVTT/anns/MSRVTT_data.json \
 features_path=${TMPDIR}/video/MSRVTT/videos/all \
 max_frames=${FRAMES} \
 output=${TMPDIR} \
-feature_file_name="CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k"
+feature_file_name=${FEAT_FILE}
 
 
 python ${SRC_PATH}/src/video_retrieval/cli/retrieval_score.py \
 --config-path ${CONFIG_PATH} \
 --config-name ${CONFIG_NAME} \
-feature_file_name="CLIP-ViT-H-14-frozen-xlm-roberta-large-laion5B-s13B-b90k" \
+feature_file_name=${FEAT_FILE} \
 output=${TMPDIR}
