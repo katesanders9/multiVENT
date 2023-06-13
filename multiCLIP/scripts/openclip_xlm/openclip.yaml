@@ -1,0 +1,105 @@
+
+output: ~
+checkpoint_path: ~
+preprocess_path: ~
+restart_checkpoint_path: ~
+
+infact_metadata_path: ~
+video_retrieval_path: ~
+
+infact_category_path: ~
+infact_event_path: ~
+infact_language_path: ~
+
+feature_file_name: "features"
+
+load_laion_checkpoint: False
+
+unfreeze_laion_visual_layer: ~ #30
+unfreeze_laion_text_layer: ~ #20
+
+config_file: ~
+tokenizer_path: ~
+
+train_csv: ~
+val_csv: ~
+test_csv: ~
+data_path: ~
+features_path: ~
+
+eval_on_start: False
+per_device_train_batch_size: 4
+dataloader_num_workers: 8
+
+
+max_words: 77
+feature_framerate: 1
+max_frames: 12
+eval_frame_order: 0
+train_frame_order: 0
+slice_framepos: 2
+expand_msrvtt_sentences: True
+
+test:
+  per_device_batch_size: 4
+  dataloader_num_workers: 8
+
+train:
+  resume_from_checkpoint: False
+  #
+  #num_train_epochs: 25
+  #warmup_ratio: 0.1
+  #save_strategy: "epoch"
+  #evaluation_strategy: "epoch"
+  #
+  save_strategy: "steps"
+  save_steps: 500
+  evaluation_strategy: "steps"
+  eval_steps: 500
+  max_steps: 20000
+  warmup_steps: 2000
+  #
+  learning_rate: 0.001
+  weight_decay: 0.01
+  load_best_model_at_end: True
+  remove_unused_columns: False
+  save_total_limit: 2
+  gradient_accumulation_steps: 1
+  per_device_batch_size: 4
+  dataloader_num_workers: 8
+  logging_steps: 10
+
+
+mean: [0.48145466, 0.4578275, 0.40821073]
+std: [0.26862954, 0.26130258, 0.27577711]  
+
+vit_config:
+  # video model
+  hidden_size: 1024
+  num_frames: 12
+  depth: 4
+  num_heads: 8
+  intermediate_size: 4096
+  hidden_act: "gelu"
+  hidden_dropout_prob: 0.0
+  attention_probs_dropout_prob: 0.0
+  initializer_range: 0.02
+  layer_norm_eps: 1e-12
+  qkv_bias: True
+  patch_size: 14
+
+clip_model:
+  embed_dim: 1024
+  vision_cfg: 
+    image_size: 224
+    layers: 32
+    width: 1280
+    head_width: 80
+    patch_size: 14
+  text_cfg: 
+    hf_model_name: xlm-roberta-large 
+    hf_tokenizer_name: xlm-roberta-large 
+    proj: mlp
+    pooler_type: mean_pooler
+    vocab_size: 1
+
