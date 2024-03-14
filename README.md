@@ -18,8 +18,8 @@ multiVENT
     |   └───openclip_xlm
     |   |   |    openclip_featpool_msrvtt_infer.py       # Python code for inference on MSRVTT
     |   |   |    openclip_featpool_msrvtt_infer.sh       # Bash script for inference on MSRVTT
-    |   |   |    openclip_featpool_multivent_infer.py    # Python code for inference on MSRVTT
-    |   |   |    openclip_featpool_multivent_infer.sh    # Bash script for inference on MSRVTT
+    |   |   |    openclip_featpool_multivent_infer.py    # Python code for inference on MultiVENT
+    |   |   |    openclip_featpool_multivent_infer.sh    # Bash script for inference on MultiVENT
     |   |   |    openclip.yaml                           # Config file for model inference
     |   |  
     |   └───utils
