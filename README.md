@@ -6,7 +6,8 @@ This repository contains code and data for MultiVENT (Multilingual Videos of Eve
 ```
 multiVENT
 |   
-|   README.md             # Repository documentation
+|   README.md                  # Repository documentation
+|   multivent_datasheet.pdf    # Datasheet PDF providing detailed dataset documentation of MultiVENT 1.0
 |
 └───data
 |   |    multivent_base.csv    # MultiVENT 1.0 dataset in CSV format
