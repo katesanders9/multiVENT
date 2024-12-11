@@ -5,8 +5,17 @@ This repository contains code and data for MultiVENT (Multilingual Videos of Eve
 ## Overview
 ```
 multiVENT
-|   dataset.csv    # MultiVENT dataset in CSV format
-|   README.md      # Repository documentation
+|   
+|   README.md             # Repository documentation
+|
+└───data
+|   |    multivent_base.csv    # MultiVENT 1.0 dataset in CSV format
+|   |    multivent_g.json      # MultiVENT-G video IDs and annotations
+|   |
+|   └───multivent_2
+|       |    multivent_2_ids.csv   # MultiVENT 2.0 (train) video IDs
+|       |    multivent_2_q.csv     # MultiVENT 2.0 (train) retrieval queries
+|       |    multivent_2_j.jsonl   # MultiVENT 2.0 (train) query-video judgments
 |   
 └───multiCLIP
     |    setup.cfg    # Additional setup file
