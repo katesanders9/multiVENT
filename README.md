@@ -1,6 +1,13 @@
 # MultiVENT: Multilingual Videos of Events and Aligned Natural Text
 
-This repository contains code and data for MultiVENT (Multilingual Videos of Events and aligned Natural Text), a collection of 2,396 multilingual internet news videos with natural language descriptions spanning five target languages. All videos are annotated with ground truth labels and corresponding video text descriptions and current event articles. The repository additionally includes setup code for our MultiCLIP video retrieval approach.
+This repository contains data for:
+- **MultiVENT** ([Multilingual Videos of Events and aligned Natural Text](https://arxiv.org/abs/2307.03153))
+- **MultiVENT 2.0** ([A Massive Multilingual Benchmark for Event-Centric Video Retrieval](https://arxiv.org/abs/2410.11619))
+- **MultiVENT-G** ([Grounding Partially-Defined Events in Multimodal Data](https://arxiv.org/abs/2410.05267))
+
+The repository additionally includes setup code for our MultiCLIP video retrieval approach ([NeurIPS D&B, 2023](https://arxiv.org/abs/2307.03153)).
+
+See the repository overview below to find the correct files for each dataset.
 
 ## Overview
 ```
