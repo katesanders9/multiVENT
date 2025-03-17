@@ -1,5 +1,25 @@
 # MultiVENT: Multilingual Videos of Events and Aligned Natural Text
 
+## 🔥🔥🔥 MultiVENT 2.0 is now on HuggingFace! 🔥🔥🔥
+
+We are happy to announce the full release of MultiVENT 2.0 through Huggingface:
+
+**[https://huggingface.co/datasets/hltcoe/MultiVENT2.0](https://huggingface.co/datasets/hltcoe/MultiVENT2.0)**
+ 
+All train and test videos are provided, subset into tar files of 100 videos. Baseline extracted features are provided as well, including:
+
+- CLIP features of 10 frames extracted via pySceneDetect
+- SigLIP features of 16 frames uniformly extracted
+- Whisper ASR transcripts
+- PaddleOCR output
+- ICDAR OCR output (better multilingual OCR from Etter et al., 2023)
+- Florence video captions (test only)
+
+The train queries/judgments are also available, along with the test queries. The repository is set for manual approval, so if you do not get approval within a day please let us know.
+The leaderboard for final results on test will be up by the end of the week. Please feel free to reach out with any questions!
+
+## Repository information
+
 This repository contains data for:
 - **MultiVENT** ([Multilingual Videos of Events and aligned Natural Text](https://arxiv.org/abs/2307.03153))
 - **MultiVENT 2.0** ([A Massive Multilingual Benchmark for Event-Centric Video Retrieval](https://arxiv.org/abs/2410.11619))
